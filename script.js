@@ -56,7 +56,7 @@ const products = [
 let cart = [];
 
 // Step 3: Get References to HTML elements
-// This connects our JavaScript to specific parts of our webpag
+// This connects our JavaScript to specific parts of our webpage
 
 const cartCountElement = document.getElementById('cart-count');
 const productsGrid = document.getElementById('products-grid');
