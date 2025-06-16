@@ -100,8 +100,7 @@ function createProductCard(product) {
 // Function to display products on the page
 
 function displayProducts(productsToShow = products) {
-    // page// If we're on the products page
-
+    //If we're on the products page
     if (productsGrid) {
         // Create HTML for each product and join them together
         const productsHTML = productsToShow.map(createProductCard).join('');
@@ -109,10 +108,18 @@ function displayProducts(productsToShow = products) {
     }
 }
 
+//If we're on the homepage, show the first 3 products as featured
+if (featuredProducts) {
+    const featuredHTML = productsToShow.slice(0, 3).map(createdProductCard).join('');
+    featuredProducts.innerHTML = featuredHTML;
+}
+
+//Function to add product to cart (this will be built next)
 function addToCart(productId) {
     alert(`Product ${productId} added to cart!`);
 }
 
+//Function to view products
 function viewProduct(productId) {
     const product = products.find(prod => prod.id === productId)
     alert('Product: ' + product.name + '\nPrice: ' + formatPrice(product.price) + '\nDescriprion: ' + product.description);
