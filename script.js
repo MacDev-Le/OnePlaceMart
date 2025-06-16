@@ -154,7 +154,7 @@ function setupFilters() {
             //Display the filtered products
             displayProducts(filteredProducts);
 
-            console.log('Showing', filteredProducts.length, 'products in category', category)
+            console.log('Showing', filteredProducts.length, 'products in category', category);
         });
     });
 }
